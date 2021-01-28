@@ -9,6 +9,7 @@
         android:layout_height="75dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/icon_null" />
+        app:srcCompat="@drawable/icon_null"
+        android:scaleType="center" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,9 +21,9 @@ class SpaceItemDecorationKotlin(
             left = space
             right = space
             bottom = space
-            if (parent.getChildAdapterPosition(view) != 0) {
-                top = space
-            }
+
+            top = space
+
         }
 
     }

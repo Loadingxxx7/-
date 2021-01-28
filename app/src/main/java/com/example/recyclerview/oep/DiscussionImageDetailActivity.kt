@@ -5,11 +5,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.PagerAdapter
 import com.bumptech.glide.Glide
 import com.example.recyclerview.R
 import kotlinx.android.synthetic.main.activity_discussion_image_detail.*
+import kotlinx.android.synthetic.main.activity_item.*
 import kotlinx.android.synthetic.main.activity_item.view.*
 
 class DiscussionImageDetailActivity : AppCompatActivity() {
@@ -45,6 +47,7 @@ class DiscussionImageDetailActivity : AppCompatActivity() {
         }
 
 
+        @SuppressLint("InflateParams")
         override fun instantiateItem(container: ViewGroup, position: Int): Any {
             val view = LayoutInflater.from(container.context)
                     .inflate(R.layout.activity_item, null)

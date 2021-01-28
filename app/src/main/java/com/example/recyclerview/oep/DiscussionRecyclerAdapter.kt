@@ -11,6 +11,7 @@ import com.bumptech.glide.request.RequestOptions
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.BaseViewHolder
 import com.example.recyclerview.R
+import com.example.recyclerview.recyclerview.kotlin.SpaceItemDecorationKotlin
 
 /**
  * @author Xiaozh
@@ -49,6 +50,7 @@ class DiscussionRecyclerAdapter(
         if (imageRecycler.adapter == null) {
             val layoutManager = GridLayoutManager(mContext, 3)
             imageRecycler.layoutManager = layoutManager
+            imageRecycler.addItemDecoration(SpaceItemDecorationKotlin(15))
             imageRecycler.adapter = imageAdapter
         }
         imageAdapter.setNewData(item.urls)
