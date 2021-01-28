@@ -21,7 +21,6 @@ class SpaceItemDecorationKotlin(
             left = space
             right = space
             bottom = space
-
             top = space
 
         }
