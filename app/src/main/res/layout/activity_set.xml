@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/mToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="设置" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="0dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="0dp">
+
+            <include
+                android:id="@+id/itemOne"
+                layout="@layout/set_item_1" />
+
+            <include
+                android:id="@+id/itemTwo"
+                layout="@layout/set_item_1" />
+
+            <include
+                android:id="@+id/itemThree"
+                layout="@layout/set_item_1" />
+
+            <include
+                android:id="@+id/itemFour"
+                layout="@layout/set_item_1" />
+
+            <include
+                android:id="@+id/itemFive"
+                layout="@layout/set_item_1" />
+
+            <include
+                android:id="@+id/itemSix"
+                layout="@layout/set_item_1" />
+
+            <include
+                android:id="@+id/itemSev"
+                layout="@layout/set_item_1" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn"
+                    android:text="退出登录"
+                    android:textColor="#999999"
+                    android:background="@drawable/bgbtn"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="38dp"
+                    android:layout_marginRight="38dp"
+                    android:layout_marginBottom="40dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

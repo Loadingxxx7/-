@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="10dp"
+    app:cardCornerRadius="4dp"
+    android:fitsSystemWindows="true">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/bg"
+        android:fitsSystemWindows="true">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="XX省 XX市"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvReportTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="yyyy-mm-dd hh:mm:ss"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="100sp"
+            android:text="XX℃"
+            android:layout_marginTop="5dp"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvWeather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="X"
+            android:textSize="30sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvWind"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:text="XX风≤X级"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvHumidity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:text="湿度XX%"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
