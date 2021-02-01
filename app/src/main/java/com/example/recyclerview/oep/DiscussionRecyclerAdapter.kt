@@ -2,6 +2,7 @@ package com.example.recyclerview.oep
 
 import android.content.Intent
 import android.text.TextUtils
+import android.view.View
 import android.widget.TextView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -23,7 +24,9 @@ import com.example.recyclerview.recyclerview.kotlin.SpaceItemDecorationKotlin
 class DiscussionRecyclerAdapter(
         layoutResId: Int,
         data: MutableList<DiscussionEntity>?
-) : BaseQuickAdapter<DiscussionEntity, BaseViewHolder>(layoutResId, data) {
+) : BaseQuickAdapter<DiscussionEntity, BaseViewHolder>(layoutResId, data), BaseQuickAdapter.OnItemChildClickListener {
+
+    private var urlList = ArrayList<String>()
 
     private val imageAdapter = DiscussionImageRecyclerAdapter(R.layout.item_discussion_image)
 
@@ -54,14 +57,20 @@ class DiscussionRecyclerAdapter(
             imageRecycler.adapter = imageAdapter
         }
         imageAdapter.setNewData(item.urls)
-        imageAdapter.setOnItemChildClickListener { _, view, position ->
-            if (view.id == R.id.ivContent) {
+        urlList = item.urls
+        imageAdapter.onItemChildClickListener = this
+    }
+
+    override fun onItemChildClick(adapter: BaseQuickAdapter<*, *>?, view: View?, position: Int) {
+        if (view?.id == R.id.ivContent) {
+            imageAdapter.getItem(position).let {
                 val intent = Intent(mContext, DiscussionImageDetailActivity::class.java).apply {
                     putExtra("position", position)
-                    putStringArrayListExtra("imageUrlList", item.urls)
+                    putStringArrayListExtra("imageUrlList", urlList)
                 }
                 mContext.startActivity(intent)
             }
+
         }
     }
 }
